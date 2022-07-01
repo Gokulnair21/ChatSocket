@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomePage">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/please_choose_your_role"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/serverPage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="1dp"
+        app:strokeColor="#20000000"
+        android:id="@+id/serverPage"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintHeight_percent="0.25"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/clientPage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/server"
+                android:src="@drawable/server" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <TextView
+                android:text="@string/server"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="1dp"
+        app:strokeColor="#20000000"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintHeight_percent="0.25"
+        android:id="@+id/clientPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/client"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverPage">
+
+      <LinearLayout
+          android:gravity="center"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageView
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:layout_height="0dp"
+              android:contentDescription="@string/client"
+              android:src="@drawable/client" />
+          <Space
+              android:layout_width="wrap_content"
+              android:layout_height="10dp"/>
+          <TextView
+              android:text="@string/client"
+              android:textSize="20sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

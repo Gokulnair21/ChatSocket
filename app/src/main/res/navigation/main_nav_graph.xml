@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.chatsocket.ui.home.HomePage"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePage_to_serverPage"
+            app:destination="@id/serverPage" />
+        <action
+            android:id="@+id/action_homePage_to_clientPage"
+            app:destination="@id/clientPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/serverPage"
+        android:name="com.example.chatsocket.ui.server.ServerPage"
+        android:label="Server"
+        tools:layout="@layout/fragment_server_page"/>
+    <fragment
+        android:id="@+id/clientPage"
+        android:name="com.example.chatsocket.ui.client.ClientPage"
+        android:label="Client"
+        tools:layout="@layout/fragment_client_page"/>
+</navigation>

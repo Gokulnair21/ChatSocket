@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ChatSocket</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="client">Client</string>
+    <string name="please_choose_your_role">Please choose your role</string>
+    <string name="send_message">Send Message</string>
+    <string name="message">Message</string>
+    <string name="server">Server</string>
+    <string name="server_instruction">Please make sure that you are connected to a network before starting the server</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="show_chat_page">Show Chat page</string>
+    <string name="connect">Connect</string>
+    <string name="client_instruction">Please make sure that you are connected to the same network in which your server is connected.</string>
+    <string name="ip_address">IP Address</string>
+</resources>
